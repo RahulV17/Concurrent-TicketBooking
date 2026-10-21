@@ -1,0 +1,13 @@
+# Compiled output
+bin/
+out/
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Study notes, not part of the deliverable
+docs/interview-questions.md
+
+

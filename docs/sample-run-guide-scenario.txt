@@ -1,0 +1,56 @@
+=================================================================
+        CONCURRENT EVENT SEAT BOOKING SYSTEM (INTERACTIVE)       
+=================================================================
+
+Enter Event Name: Enter Total Number of Seats: [OK] Created Event 'Tech Meetup 2026' with 10 seats (Seats 1 to 10).
+[status-monitor] [STATUS-MONITOR] Status: ACTIVE. Booking service is running and ready.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): Customer Name: Seat Number: [pool-1-thread-1] [SUCCESS] Alice successfully booked Seat 3!
+[pool-1-thread-1] [DONE] Booking attempt for Alice (Seat 3) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): How many concurrent booking requests?   Request 1 - Customer Name:   Request 1 - Seat Number:   Request 2 - Customer Name:   Request 2 - Seat Number:   Request 3 - Customer Name:   Request 3 - Seat Number: [APPLICATION] Launching 3 requests SIMULTANEOUSLY across thread pool...
+[pool-1-thread-1] [SUCCESS] Meera successfully booked Seat 5!
+[pool-1-thread-1] [DONE] Booking attempt for Meera (Seat 5) completed.
+[pool-1-thread-2] [SUCCESS] Ana successfully booked Seat 4!
+[pool-1-thread-2] [DONE] Booking attempt for Ana (Seat 4) completed.
+[pool-1-thread-3] [REJECTED] Ravi could not book Seat 4: Seat 4 is already booked or not available.
+[pool-1-thread-3] [DONE] Booking attempt for Ravi (Seat 4) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [AVAILABLE SEATS]: [1, 2, 6, 7, 8, 9, 10]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [CONFIRMED BOOKINGS]:
+  - Booking[Customer: Alice, Seat: 3]
+  - Booking[Customer: Meera, Seat: 5]
+  - Booking[Customer: Ana, Seat: 4]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [APPLICATION] Shutting down thread pool executor...
+[APPLICATION] Stopping background status monitor...
+[status-monitor] [MONITOR STOP] Status monitor stopped cleanly.
+==================== BOOKING SUMMARY ====================
+Event: Tech Meetup 2026 | Total: 10 | Booked: 3 | Remaining: 7
+=========================================================

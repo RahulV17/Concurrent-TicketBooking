@@ -1,0 +1,49 @@
+=================================================================
+        CONCURRENT EVENT SEAT BOOKING SYSTEM (INTERACTIVE)       
+=================================================================
+
+Enter Event Name: Enter Total Number of Seats: [OK] Created Event 'Java Community Meetup' with 10 seats (Seats 1 to 10).
+[status-monitor] [STATUS-MONITOR] Status: ACTIVE. Booking service is running and ready.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): How many concurrent booking requests?   Request 1 - Customer Name:   Request 1 - Seat Number:   Request 2 - Customer Name:   Request 2 - Seat Number:   Request 3 - Customer Name:   Request 3 - Seat Number:   Request 4 - Customer Name:   Request 4 - Seat Number: [APPLICATION] Launching 4 requests SIMULTANEOUSLY across thread pool...
+[pool-1-thread-3] [SUCCESS] Meera successfully booked Seat 5!
+[pool-1-thread-3] [DONE] Booking attempt for Meera (Seat 5) completed.
+[pool-1-thread-2] [SUCCESS] Ravi successfully booked Seat 3!
+[pool-1-thread-2] [DONE] Booking attempt for Ravi (Seat 3) completed.
+[pool-1-thread-2] [REJECTED] Dev could not book Seat 11: Seat 11 is outside the valid range 1 to 10.
+[pool-1-thread-2] [DONE] Booking attempt for Dev (Seat 11) completed.
+[pool-1-thread-1] [REJECTED] Ana could not book Seat 3: Seat 3 is already booked or not available.
+[pool-1-thread-1] [DONE] Booking attempt for Ana (Seat 3) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [AVAILABLE SEATS]: [1, 2, 4, 6, 7, 8, 9, 10]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [CONFIRMED BOOKINGS]:
+  - Booking[Customer: Meera, Seat: 5]
+  - Booking[Customer: Ravi, Seat: 3]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [APPLICATION] Shutting down thread pool executor...
+[APPLICATION] Stopping background status monitor...
+[status-monitor] [MONITOR STOP] Status monitor stopped cleanly.
+==================== BOOKING SUMMARY ====================
+Event: Java Community Meetup | Total: 10 | Booked: 2 | Remaining: 8
+=========================================================

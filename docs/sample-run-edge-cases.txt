@@ -1,0 +1,70 @@
+=================================================================
+        CONCURRENT EVENT SEAT BOOKING SYSTEM (INTERACTIVE)       
+=================================================================
+
+Enter Event Name: Enter Total Number of Seats: [OK] Created Event 'Edge Event' with 3 seats (Seats 1 to 3).
+[status-monitor] [STATUS-MONITOR] Status: ACTIVE. Booking service is running and ready.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [CONFIRMED BOOKINGS]:
+  (no bookings yet)
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): Customer Name: [ERROR] This field cannot be empty.
+Customer Name: Seat Number: [pool-1-thread-1] [REJECTED] Alice could not book Seat 0: Seat 0 is outside the valid range 1 to 3.
+[pool-1-thread-1] [DONE] Booking attempt for Alice (Seat 0) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): Customer Name: Seat Number: [pool-1-thread-2] [REJECTED] Bob could not book Seat 5: Seat 5 is outside the valid range 1 to 3.
+[pool-1-thread-2] [DONE] Booking attempt for Bob (Seat 5) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): How many concurrent booking requests? [ERROR] Value must be greater than 0.
+How many concurrent booking requests?   Request 1 - Customer Name:   Request 1 - Seat Number:   Request 2 - Customer Name:   Request 2 - Seat Number: [APPLICATION] Launching 2 requests SIMULTANEOUSLY across thread pool...
+[pool-1-thread-1] [SUCCESS] Dave successfully booked Seat 2!
+[pool-1-thread-1] [DONE] Booking attempt for Dave (Seat 2) completed.
+[pool-1-thread-3] [REJECTED] Carol could not book Seat 2: Seat 2 is already booked or not available.
+[pool-1-thread-3] [DONE] Booking attempt for Carol (Seat 2) completed.
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [AVAILABLE SEATS]: [1, 3]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [CONFIRMED BOOKINGS]:
+  - Booking[Customer: Dave, Seat: 2]
+--- MENU ---
+1. Book a Single Seat
+2. Submit Multiple Concurrent Bookings
+3. View Available Seats
+4. View Confirmed Bookings
+5. Exit
+Select an option (1-5): [APPLICATION] Shutting down thread pool executor...
+[APPLICATION] Stopping background status monitor...
+[status-monitor] [MONITOR STOP] Status monitor stopped cleanly.
+==================== BOOKING SUMMARY ====================
+Event: Edge Event | Total: 3 | Booked: 1 | Remaining: 2
+=========================================================
